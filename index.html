@@ -11,6 +11,25 @@
 	
 	body {
 		font-size: 12px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 5px;
+	}
+
+	body * {
+		max-width: 100%;
+	}
+
+	main {
+		display: block;
+		width: 100%;
+	}
+
+	nav {
+		display: block;
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
 	ul {
@@ -23,11 +42,25 @@
     transition: 0.5s;
 	}
 
+	h1 {
+		font-size: 1.8em;
+	}
+
+
+/*	li:last-child {
+
+	}*/
+
+	img {
+		width: 100%;
+    height: auto;
+	}
+
 
 	/* navbar */
 	nav {
-		position: relative;
-		padding-top: 1.5em;
+		/*position: relative;*/
+		padding-top: 50px;
 	}
 
 	nav ul {
@@ -39,12 +72,25 @@
 
 	nav li {
     border: 2px dotted black;
-    padding: 1.5em;
+    padding: 1em;
 	}
 
 	nav li:hover {
 		transform: scale( 0.9 );
 	}
+
+
+	/* services */
+	.services li {
+		text-align: center;
+		max-width: 49%;
+	}
+
+	.services p {
+		font-size: 1.25em;
+	}
+
+
 
 </style>
 
@@ -70,26 +116,52 @@
 	<main>
 
 		<section class="header">
-			<img src="" />
-			<img src="" />
+			<img src="+e_logo_techequation/+e_Logo_mock_v3_pg6_blue.jpg" />
+			<img src="techequation.png" />
+			<p>
+				We are a non-profit startup focusing on after school programming. We believe that empowering our students with practical knowledge for career readiness is important for our community. Our programs are custom tailored to help aid students in the aspects of Science, Technology, Engineering, and Math, STEM.
+			</p>
+			<p>
+				We are looking for schools, K-12, to introduce our program to. Please like our page and nominate your school by posting your school's name and the student that is interested in joining our FREE after school programming.
+			</p>
+			<p>
+				Some of the projects: 
+				Daily mentoring.
+				Tutoring (homework help).
+				Nutrition program (after school snack).
+				Using microscopes.
+				Electronics, microprocessors.
+				Electronics, building computers.
+				Low-voltage wiring, network cable technician.
+				Rocket building.
+				Mechanical Engineering, bridge building.
+				Leadership and team-building.
+				Technical life skills.
+				Job readiness, developing a successful resume.
+			</p>
 		</section>
 
-		<section class="buttons">
-			<ul>
+		<section>
+			<ul class="services">
 				<li href="#">
-					<img src="" />
+					<img src="rocket.png" />
+					<p>Customizable </br> After School </br> Programs</p>
 				</li>
 				<li href="#">
-					<img src="" />
+					<img src="gears.png" />
+					<p>Community </br> Out Reach </br> Free/Low Cost</p>
 				</li>
 				<li href="#">
-					<img src="" />
+					<img src="handshake.png" />
+					<p>+e </br> The Bridge</p>
 				</li>
 				<li href="#">
-					<img src="" />
+					<img src="graph.png" />
+					<p>Student </br> Mentor </br> Program</p>
 				</li>
 				<li href="#">
-					<img src="" />
+					<img src="target.png" />
+					<p>Professionals </br> in Applied </br> Sciences</p>
 				</li>
 			</ul>
 		</section>
@@ -97,7 +169,17 @@
 	</main>
 
 	<footer>
-		
+		<div>
+			<p>Copyright Tech+Equation 2017 </br> Local Leader. Local Challanges. Local Solutions. </br> Merced, CA 95358</p>
+		</div>
+
+		<div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>	
+		</div>
 	</footer>
 
 </body>
