@@ -9,11 +9,17 @@
 
 <style type="text/css">
 	
+	a {
+		text-decoration: none;
+		outline: none;
+		color: #00c3c8;
+	}
+
 	body {
 		font-size: 12px;
     overflow-x: hidden;
     margin: 0;
-    padding: 5px;
+    padding: 0;
 	}
 
 	body * {
@@ -39,6 +45,7 @@
 
 	li {
 		display: inline-block;
+		float: left;
     transition: 0.5s;
 	}
 
@@ -46,14 +53,29 @@
 		font-size: 1.8em;
 	}
 
+	p.list {
+    white-space: pre-line;
+    text-align: left;
+    padding-left: 2em;
+	}
+
+	.clearfix::after { 
+		content: " ";
+		display: block; 
+		height: 0; 
+		clear: both;
+	}
 
 /*	li:last-child {
 
 	}*/
 
 	img {
+		max-height: 100vh;
+		max-width: auto;
 		width: 100%;
     height: auto;
+    margin: 0 auto;
 	}
 
 
@@ -73,23 +95,74 @@
 	nav li {
     border: 2px dotted black;
     padding: 1em;
+    margin: 2px;
 	}
 
 	nav li:hover {
 		transform: scale( 0.9 );
 	}
 
+	section, footer {
+		padding: 15px 5px;
+	}
+
+
+	/* header */
+	.header {
+		padding: 0;
+	}
+
+	/* content */
+	.content {
+		background-color:	black;
+		color: white; 
+		font-size: 14px;
+	}
+
 
 	/* services */
+	.services {
+	}
+
+	.services ul {
+		margin: 0 auto;
+	}
+
 	.services li {
-		text-align: center;
-		max-width: 49%;
+    text-align: center;
+    width: 47%;
+    display: inline-grid;
+    margin: 15px 5px;
+    max-width: 200px;
+    height: 200px;
+    /*float: none;*/
+    margin-bottom: 10px;
 	}
 
 	.services p {
 		font-size: 1.25em;
 	}
 
+
+	/* footer */
+	footer {
+		display: block;
+		background-color:	black;
+		color: white; 
+		font-size: 14px;
+	}
+
+	footer ul {
+		margin: 0 auto;
+    width: 240px;
+	}
+
+	footer li {
+		text-align: center;
+		padding: 5px;
+		font-size: 1.4em;
+		float: none;
+	}
 
 
 </style>
@@ -118,14 +191,18 @@
 		<section class="header">
 			<img src="+e_logo_techequation/+e_Logo_mock_v3_pg6_blue.jpg" />
 			<img src="techequation.png" />
+		</section>
+		
+		<section class="content">
 			<p>
 				We are a non-profit startup focusing on after school programming. We believe that empowering our students with practical knowledge for career readiness is important for our community. Our programs are custom tailored to help aid students in the aspects of Science, Technology, Engineering, and Math, STEM.
 			</p>
 			<p>
 				We are looking for schools, K-12, to introduce our program to. Please like our page and nominate your school by posting your school's name and the student that is interested in joining our FREE after school programming.
 			</p>
-			<p>
-				Some of the projects: 
+			
+			<strong>Some of the projects:</strong>
+			<p class="list">
 				Daily mentoring.
 				Tutoring (homework help).
 				Nutrition program (after school snack).
@@ -141,8 +218,8 @@
 			</p>
 		</section>
 
-		<section>
-			<ul class="services">
+		<section class="services clearfix">
+			<ul>
 				<li href="#">
 					<img src="rocket.png" />
 					<p>Customizable </br> After School </br> Programs</p>
@@ -170,7 +247,11 @@
 
 	<footer>
 		<div>
-			<p>Copyright Tech+Equation 2017 </br> Local Leader. Local Challanges. Local Solutions. </br> Merced, CA 95358</p>
+			<p>Copyright Tech+Equation 2017 </br> 
+			Local Leader. Local Challanges. Local Solutions. </br> 
+			Merced, CA 95358 </br> 
+			<a href="mailto:mark@techequation.org">Contact us.</a>
+			</p>	
 		</div>
 
 		<div>
